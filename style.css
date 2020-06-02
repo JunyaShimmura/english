@@ -1,0 +1,383 @@
+body,html{
+    margin: 0 auto;
+    padding: 0;
+
+}
+ /* ハンバーガー
+  ------------------------------------------------ */
+  .burger__btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 1;
+  }
+  .burger__btn:hover{
+    opacity: .8;
+  }
+  .burger__btn.open{
+    background-color: rgba(0,0,0,.0);
+  }
+  .burger__btn p{
+    width: 33%;
+    height: 33%;
+    position: absolute;
+    overflow: hidden;
+  }
+  
+  .burger__btn span{
+    position: absolute;
+    width: 150%;
+    height: 2px;
+    background: #fff;
+  }
+  
+  .burger__btn span:first-child{
+    top: 0;
+    transform-origin: top left;
+  }
+  .burger__btn span:nth-child(2){
+    top: calc(50% - 1px);
+  }
+  .burger__btn span:last-child{
+    bottom: 0;
+    transform-origin: bottom left;
+  }
+  /* close */
+  .burger__btn.open span:first-child{
+    transform: rotate(45deg) translateY(-50%);
+  }
+  .burger__btn.open span:nth-child(2){
+    opacity: 0;
+  }
+  .burger__btn.open span:last-child{
+    transform: rotate(-45deg) translateY(50%);
+  }
+  /* modal */
+  .burger__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .burger__modal__inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: rgba(0,0,0,.8);
+  }
+  .burger__modal__menu li{
+    font-size: 1.6rem;
+    line-height: 3;
+   }
+   
+   .burger__modal__menu a{
+    text-decoration: none;
+    color: inherit;
+}
+  
+ .top{
+       background-image: url(img/333.JPG);
+       background-size: cover;
+       height: 600px;
+       color: #fff;
+   }
+  h1{
+    padding: 20px;
+    font-size: 40px;
+  } 
+
+
+   h2{
+     text-align: center;
+     font-size: 30px;
+   }
+.info{
+  padding: 32px 12px;
+  background-color: #fb9db8;
+}   
+.info .row{
+  margin: auto;
+  width: 70%;
+  background-color: #fff;
+  color: #000;
+}
+
+
+  .four{
+    padding-top: 48px;
+  }
+  .four nav{
+  
+  }
+  .four nav ul{
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .four nav li{
+    width: 33.3333%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #62cbf1;
+    border-right: 1px solid #fff;
+    cursor: pointer;
+  }
+  .four nav li:last-child{
+    width: 34%;
+    border-right: none;
+  }
+  .four nav li:hover{
+    background-color: #06afec;
+  }
+  .four-content{
+    margin: 0 12px 48px 12px;
+  }
+  .four-content .item{
+    margin: 0 auto;
+    max-width: 700px;
+    display: none;
+    transition: opacity .5s;
+    opacity: 0;
+  }
+  .four-content .item.active{
+    display: block;
+    opacity: 1; 
+  }
+  .four-content .item-part{
+    margin-bottom: 32px;
+  }
+  
+  .four-content .item-part h3{
+    font-size: 2rem;
+    margin-bottom: 1em;
+  }
+  .four-content .item-part p{
+    line-height: 2;
+  }
+  .four-content .item-part i {
+    margin-right: 8px;
+  }
+  @media screen and (min-width: 700px){
+    .four-content .item.active{
+      display: flex;
+    }
+    .four-content .item-part{
+      flex: 1;
+    }
+  }
+  
+  @media screen and (min-width: 960px){
+    .four nav li{
+      font-size: 1.4rem;
+    }
+  
+    .four-content .item {
+      max-width: 960px;
+    }
+    .four-content .item-part{
+      margin-bottom: 0;
+      width: 50%;
+    }
+  }
+
+.reason p{
+  text-align: center;
+}
+.reason ul{
+  display: none;
+
+}  
+.reason ul.open{
+  display: block;
+  opacity: 1; 
+  list-style: none;
+}
+.reason button:hover{
+  opacity: .5;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+}
+.reason .row{
+  width: 80%;
+  margin: auto;
+}
+.reason img{
+  width: 30%;
+}
+/* よくある質問
+------------------------------------------------ */
+.qa-content{
+  padding: 32px 12px;
+  background-color: #fb9db8;
+}
+.qa-content dt{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 16px;
+  margin: 24px auto 0 auto;
+  max-width: 700px;
+}
+.qa-content dt:first-child{
+  margin-top: 0;
+}
+.qa-content dt .btn{
+  /* background-color: #aaa; */
+  height: 16px;
+  width: 16px;
+}
+.qa-content dt .btn span{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform .3s;
+}
+.qa-content dt.open .btn span{
+  transform: rotate(-45deg);
+}
+
+.qa-content dt .btn span::before{
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #aaa;
+}
+.qa-content dt .btn span::after{
+  content: "";
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background-color: #aaa;
+}
+.qa-content dd{
+  padding: 16px;
+  background-color: #fff;
+  line-height: 1.6;
+  display: none;
+  margin: 2px auto 0 auto;
+  max-width: 700px;
+}
+
+  /* フォーム
+------------------------------------------------ */
+.contact{
+  padding-top: 48px;
+
+}
+.lead{
+  text-align: center;
+}
+.contact .lead span{
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 8px;
+}
+.contact__form{
+  margin: 0 12px;
+  max-width: 700px;
+}
+.contact__form p{
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.contact__form span{
+  display: none;
+  color: red;
+}
+.contact__form input{
+  margin-bottom: 8px;
+  width: 98%;
+  border: 1px solid #dedede;
+}
+.contact__form textarea{
+  width: 98%;
+  height: 240px;
+  border: 1px solid #dedede;
+}
+.contact__form button{
+  background: #ff8a65;
+  color: #fff;
+  height: 48px;
+  width: 128px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+
+/* 送信ボタン */
+.contact__form button:disabled{
+  opacity: .5;
+  cursor: default;
+}
+
+@media screen and (min-width: 700px){
+  .contact__form{
+    margin: 0 auto;
+  }
+}
+
+/* footer
+------------------------------------------------ */
+footer{
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+}
+/* トップへ
+------------------------------------------------ */
+.btnTop{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  font-size: 30px;
+  padding: 0 8px 48px 0;
+  color: #000;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform .5s,opacity .5s;
+}
+.btnTop.active{
+  transform: translateY(0%);
+  opacity: 1;
+}
